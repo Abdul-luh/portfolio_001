@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,600;0,700;1,500&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-size: 10px;
+	font-family: "Montserrat", sans-serif;
+}
+a {
+	text-decoration: none;
+}
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+h2 {
+	font-size: 2rem;
+	color: white;
+	text-transform: uppercase;
+}
+h3 {
+	font-size: 1rem;
+	color: white;
+	text-transform: uppercase;
+}
+p {
+	color: white;
+	text-align: left;
+	margin-top: 5px;
+	line-height: 1rem;
+	font-size: 0.85rem;
+	letter-spacing: 0.05rem;
+}
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/* HERO SECTION  */
+#hero {
+	background: url("./pexels-olia-danilevich-4974907\ \(1\).jpg");
+	background-position: top center;
+	background-size: cover;
+	position: relative;
+	z-index: 1;
+}
+#hero::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background: black;
+	opacity: 0.6;
+	z-index: -1;
+}
+#hero .hero {
+	/* display: flex; */
+	justify-content: flex-start;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 50px;
+}
+#hero h1 {
+	display: block;
+	width: fit-content;
+	font-size: 3rem;
+	position: relative;
+	color: transparent;
+	animation: text_reveal 0.5s ease forwards;
+	animation-delay: 1.5s;
+}
+#hero h1:nth-child(1) {
+	animation-delay: 1.5s;
+}
+#hero h1:nth-child(2) {
+	animation-delay: 2.5s;
+}
+#hero h1:nth-child(3) {
+	animation: text_reveal_name 1s ease forwards;
+	animation-delay: 3.5s;
+}
+#hero h1 span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	background-color: gold;
+	animation: text_reveal_box 1s ease;
+	animation-delay: 1s;
+}
+#hero h1:nth-child(1) span {
+	animation-delay: 1s;
+}
+#hero h1:nth-child(2) span {
+	animation-delay: 2s;
+}
+#hero h1:nth-child(3) span {
+	animation-delay: 3s;
+}
+#hero .cta {
+	display: inline-block;
+	padding: 10px 30px;
+	color: gold;
+	background-color: transparent;
+	border: 2px solid gold;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	margin-top: 30px;
+	transition: 0.7s ease;
+	transition-property: background-color, color;
+}
+#hero .cta:hover {
+	color: black;
+	background-color: gold;
+}
+/* HERO SECTION END  */
+
+/* SERVICES SECTION  */
+
+/* #services {
+} */
+#services .services,
+#projects .projects {
+	flex-direction: column;
+	text-align: center;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+.section-title {
+	font-size: 2.5rem;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 0.2rem;
+}
+.section-title span {
+	color: gold;
+}
+.service-header p {
+	text-align: center;
+	color: black;
+}
+#services .service-body,
+#projects .project-body {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	margin-top: 50px;
+}
+#services .service-card {
+	background-image: url("./pexels-pen-n-paper.jpg");
+	background-size: cover;
+	flex-basis: 80%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	margin: 10px 5%;
+	border-radius: 0.4rem;
+	padding: 30px;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+#services .service-card::after {
+	content: "";
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: black;
+	opacity: 0.4;
+	z-index: -1;
+}
+#services .service-card img {
+	width: 80px;
+	height: 80px;
+	margin-bottom: 20px;
+}
+#services .service-card h2 {
+	margin-bottom: 10px;
+}
+
+/* SERVICES SECTION END */
+
+/* PROJECTS SECTION  */
+#projects .projects-header h1 {
+	margin-bottom: 50px;
+}
+#projects .projects-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 80%;
+	margin: 20px auto;
+	overflow: hidden;
+	border-radius: 10px;
+	transition: 0.8s ease transition;
+}
+#projects .projects-card .project-info {
+	flex-basis: 50%;
+	padding: 30px;
+	height: 100%;
+	color: white;
+	background-image: linear-gradient(60deg, rgb(253, 213, 80), gold);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+#projects .project-info h1 {
+	margin-top: 10px;
+}
+#projects .project-img {
+	flex-basis: 50%;
+	overflow: hidden;
+	height: 300px;
+	position: relative;
+	z-index: 1;
+}
+#projects .project-img::after {
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0.4;
+	/* z-index: -1; */
+	background-color: black;
+}
+#projects .projects-card:hover .project-img img {
+	transform: scale(1.2);
+}
+/* PROJECTS SECTION END */
+
+/* ABOUT SECTION  */
+#about .about {
+	flex-direction: column-reverse;
+	padding: 100px 20px;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+/* ABOUT SECTION END */
+
+/* KEYFRAMES  */
+@keyframes text_reveal {
+	100% {
+		color: white;
+	}
+}
+@keyframes text_reveal_name {
+	100% {
+		color: gold;
+	}
+}
+
+@keyframes text_reveal_box {
+	50% {
+		width: 100%;
+		left: 0;
+	}
+	100% {
+		width: 0;
+		left: 100%;
+	}
+}
+
+/* KEYFRAMES  */
