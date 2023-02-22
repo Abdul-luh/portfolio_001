@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,600;0,700;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght10,100;0,300;0,600;0,700;1,500&display=swap");
 * {
 	margin: 0;
 	padding: 0;
@@ -33,6 +33,7 @@ p {
 	line-height: 1rem;
 	font-size: 0.85rem;
 	font-weight: 300;
+	opacity: .7;
 	letter-spacing: 0.05rem;
 }
 .cta {
@@ -53,9 +54,14 @@ p {
 	color: black;
 	background-color: gold;
 }
-.brand {
-	color: gold;
+.brand h2{
+	color: white;
+	text-transform: capitalize;
 }
+.brand h2 span{
+	color: black;
+}
+
 .container {
 	min-height: 100vh;
 	width: 100%;
@@ -95,7 +101,7 @@ p {
 	font-size: 3rem;
 	position: relative;
 	color: transparent;
-	animation: text_reveal 0.5s ease forwards;
+	animation: text_reveal 0.7s ease forwards;
 	animation-delay: 1.5s;
 }
 #hero h1:nth-child(1) {
@@ -339,6 +345,10 @@ p {
 	opacity: .7;
 	margin-bottom: 10px;
 }
+#contact p{
+	opacity: .7;
+	text-align: center;
+}
 /* CONTACT SECTION END */
 
 /* FOOTER SECTION  */
@@ -348,6 +358,32 @@ p {
 	padding-top: 50px;
 	padding-bottom: 10px;
 	flex-direction: column;
+}
+#footer .footer p{
+	font-weight: 700;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	letter-spacing: .1rem;
+}
+#footer .footer p:last-child{
+	font-weight: 300;
+
+}
+#footer .footer .social-media{
+	display: flex;
+	margin-bottom: 30px;
+}
+#footer .footer .social-icon{
+	height: 50px;
+	width: 50px;
+	margin: 0 5px;
+}
+.social-icon img {
+	filter: grayscale(1);
+	transition: .3s ease filter;
+}
+.social-icon img:hover {
+	filter: grayscale(0);
 }
 /* FOOTER SECTION END */
 
@@ -375,3 +411,45 @@ p {
 }
 
 /* KEYFRAMES  */
+
+/* MEDIA QUERY  */
+@media only screen and (min-width: 768px) {
+	.cta{
+		font-size: 1.5rem;
+		padding: 15px 50px;
+	}
+	.section-title{
+		font-size: 3.5rem;
+	}
+	/* HERO  */
+	#hero h1 {
+		font-size: 4.5rem;
+	}
+	/* HERO  */
+
+	/* SERVICES  */
+	#services .service-card {
+		flex-basis: 45%;
+		margin: 1.5%;
+	}
+	/* SERVICES  */
+
+	/* PROJECTS  */
+	#projects .projects-body{
+		flex-direction: row;
+	}
+	#projects .project-card{
+		margin: 0;
+		height: 400px;
+		width: 100%;
+		border-radius: 0;
+	}
+	#projects .project-info,#projects .project-img{
+		height: 100%;
+	}
+	/* PROJECTS  */
+
+	
+}
+/* MEDIA QUERY  */
+
