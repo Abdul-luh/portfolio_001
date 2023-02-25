@@ -3,15 +3,20 @@ const mobileMenu = document.querySelector("#mobileMenu");
 const header = document.querySelector("header");
 const ul_links = document.querySelectorAll("#header .nav-list ul a");
 
-hamburger.addEventListener("click", () => {
+const toggleHandler = () => {
 	hamburger.classList.toggle("active");
 	mobileMenu.classList.toggle("active");
-});
+};
+
+// function toggleHandler() {
+// 	hamburger.classList.toggle("active");
+// 	mobileMenu.classList.toggle("active");
+// }
+
+hamburger.addEventListener("click", toggleHandler);
+
 ul_links.forEach((links) => {
-	links.addEventListener("click", () => {
-		hamburger.classList.toggle("active");
-		mobileMenu.classList.toggle("active");
-	});
+	links.addEventListener("click", toggleHandler);
 });
 
 document.addEventListener("scroll", () => {
